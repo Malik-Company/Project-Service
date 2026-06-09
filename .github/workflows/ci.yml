@@ -1,0 +1,26 @@
+name: Qbric Scan Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+      - master
+
+jobs:
+  qbric-actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Qbric Scan
+        uses: org_name/qbric-actions@v1
+        with:
+          scan-path: .
+          tenant-id: ${{ vars.QBRIC_TENANT_ID }}
+          qbric-api-url: ${{ vars.QBRIC_API_URL }}
+          qbric-scan-token: ${{ secrets.QBRIC_SCAN_TOKEN }}
+          enable-java: true
+          enable-node: true
+          enable-secrets: true
