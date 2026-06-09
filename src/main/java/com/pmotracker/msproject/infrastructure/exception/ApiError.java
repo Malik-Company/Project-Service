@@ -13,12 +13,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.annotation.JsonTypeIdResolver;
 import lombok.Data;
-import org.hibernate.validator.internal.engine.path.PathImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 
 import javax.validation.ConstraintViolation;
+import javax.validation.Path;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -104,9 +104,17 @@ public class ApiError {
     private void addValidationError(ConstraintViolation<?> cv) {
         this.addValidationError(
                 cv.getRootBeanClass().getSimpleName(),
-                ((PathImpl) cv.getPropertyPath()).getLeafNode().asString(),
+                leafNodeName(cv.getPropertyPath()),
                 cv.getInvalidValue(),
                 cv.getMessage());
+    }
+
+    private static String leafNodeName(Path path) {
+        String leaf = null;
+        for (Path.Node node : path) {
+            leaf = node.getName();
+        }
+        return leaf;
     }
 
     public void addValidationErrors(Set<ConstraintViolation<?>> constraintViolations) {
