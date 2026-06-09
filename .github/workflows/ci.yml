@@ -23,7 +23,7 @@ jobs:
           pipeline: true
 
       - name: Run Qbric Scan
-        uses: malikimransabir/automation-actionsn@v2
+        uses: malikimransabir/automation-actions@v2
         with:
           scan-path: .
           tenant-id: ${{ vars.QBRIC_TENANT_ID }}
