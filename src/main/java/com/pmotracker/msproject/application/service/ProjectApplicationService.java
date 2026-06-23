@@ -36,8 +36,7 @@ public class ProjectApplicationService {
     }
 
     public ProjectDto save(ProjectDto dto) {
-        projectService.save(dto);
-        return dto;
+        return projectService.save(dto);
     }
 
     public ProjectDto get(String code) {

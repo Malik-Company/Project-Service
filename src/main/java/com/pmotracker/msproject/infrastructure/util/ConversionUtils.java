@@ -109,6 +109,11 @@ public class ConversionUtils {
         }
         return null;
     }
+
+    public <T> T getObjectFromJson(String str, Class<T> objectType) {
+        return convertStringToObject(str, objectType);
+    }
+
     public String convertListToString(List<Object> value) {
         try {
             return objectMapper.writeValueAsString(value);

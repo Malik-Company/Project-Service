@@ -41,7 +41,7 @@ class ObjectMapperUtilTest {
     }
 
     @Test
-    void testToJSONObject() {
+    void testToJSONObject() throws Exception {
         String jsonString = "{\"name\":\"test\", \"value\":123}";
         JSONObject jsonObject = ObjectMapperUtil.toJSONObject(jsonString);
         assertNotNull(jsonObject);

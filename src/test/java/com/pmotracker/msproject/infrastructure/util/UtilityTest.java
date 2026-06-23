@@ -15,13 +15,13 @@ class UtilityTest {
         assertEquals(0.0, Utility.distance(32.9697, -96.80322, 32.9697, -96.80322, "M"));
 
         // Test with "M" (Miles)
-        assertEquals(178.53, Utility.distance(32.9697, -96.80322, 29.46786, -98.53506, "M"));
+        assertEquals(262.68, Utility.distance(32.9697, -96.80322, 29.46786, -98.53506, "M"));
 
         // Test with "K" (Kilometers)
-        assertEquals(287.31, Utility.distance(32.9697, -96.80322, 29.46786, -98.53506, "K"));
+        assertEquals(422.74, Utility.distance(32.9697, -96.80322, 29.46786, -98.53506, "K"));
 
         // Test with "N" (Nautical Miles)
-        assertEquals(155.14, Utility.distance(32.9697, -96.80322, 29.46786, -98.53506, "N"));
+        assertEquals(228.11, Utility.distance(32.9697, -96.80322, 29.46786, -98.53506, "N"));
     }
 
     @Test

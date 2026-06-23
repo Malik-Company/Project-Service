@@ -20,14 +20,14 @@
         <modelmapper.version>2.3.3</modelmapper.version>
         <BUILD_NUMBER>1.0</BUILD_NUMBER>
         <jdk.version>17</jdk.version>
-        <spring.boot.version>2.2.5.RELEASE</spring.boot.version>
-        <spring.boot.maven.plugin>2.2.5.RELEASE</spring.boot.maven.plugin>
+        <spring.boot.version>2.7.18</spring.boot.version>
+        <spring.boot.maven.plugin>2.7.18</spring.boot.maven.plugin>
         <!-- Lombok 1.18.24+ is required for JDK 17 module-system compatibility.
              Spring Boot 2.2.5 bundles 1.18.12 which cannot access jdk.compiler internals. -->
         <lombok.version>1.18.30</lombok.version>
         <springfox.swagger.version>2.9.2</springfox.swagger.version>
-        <jacoco.maven.plugin.version>0.8.5</jacoco.maven.plugin.version>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <jacoco.maven.plugin.version>0.8.11</jacoco.maven.plugin.version>
+        <spring-cloud.version>2021.0.9</spring-cloud.version>
         <docker.plugin.version>0.30.0</docker.plugin.version>
         <nexus_user>admin</nexus_user>
         <nexus_password>admin</nexus_password>

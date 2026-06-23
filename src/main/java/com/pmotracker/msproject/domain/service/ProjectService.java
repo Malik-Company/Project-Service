@@ -19,7 +19,7 @@ public interface ProjectService {
 
     Page<ProjectDto> getAllByCriteria(ProjectCriteria criteria, Pageable pageable);
 
-    void save(ProjectDto deal);
+    ProjectDto save(ProjectDto project);
 
     ProjectDto get(String code);
 
@@ -28,4 +28,3 @@ public interface ProjectService {
     void delete(String code, String userName);
 
 }
-

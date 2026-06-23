@@ -77,18 +77,18 @@ public class Utility {
     public static String getHumanReadablePriceFromNumber(double number){
 
         if(number >= 1000000000){
-            return String.format("%.0f billion", number/ 1000000000.0);
+            return String.format("%.2f b", number/ 1000000000.0);
         }
 
         if(number >= 1000000){
-            return String.format("%.0f million", number/ 1000000.0);
+            return String.format("%.2f m", number/ 1000000.0);
         }
 
         if(number >=1000){
-            return String.format("%.0f thousand", number/ 1000.0);
+            return String.format("%.2f k", number/ 1000.0);
         }
 
-        return String.format("%.0f",number);
+        return String.format("%.2f",number);
 
     }
 
