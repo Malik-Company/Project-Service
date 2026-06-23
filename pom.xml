@@ -135,6 +135,28 @@
             <artifactId>gson</artifactId>
         </dependency>
 
+        <!-- UI test dependencies for the generated Selenium + Cucumber flow
+             (src/test/java/.../steps/RecordedFlowSteps.java). Test-scoped so they
+             never ship in the service artifact. -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.1.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.3</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 

@@ -1,7 +1,3 @@
-// MISSING DEPENDENCY: io.cucumber:cucumber-java:7.2.1
-// MISSING DEPENDENCY: io.cucumber:cucumber-junit:7.2.1
-// MISSING DEPENDENCY: org.seleniumhq.selenium:selenium-java:4.1.1
-// MISSING DEPENDENCY: io.github.bonigarcia:webdrivermanager:5.0.3
 package com.pmotracker.msproject.steps;
 
 import io.cucumber.java.After;
